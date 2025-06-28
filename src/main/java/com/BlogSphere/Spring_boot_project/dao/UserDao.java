@@ -40,10 +40,10 @@ public class UserDao {
 		}
 		return user;
 	}
-	public void deleteuserById(int id) {
+	public void deleteUserById(int id) {
 		userRepository.deleteById(id);
 	}
-	public Users updateuserById(int id,Users user) {
+	public Users updateUserById(int id,Users user) {
 		user.setId(id);
 		return userRepository.save(user);
 	}

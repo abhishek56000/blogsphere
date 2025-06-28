@@ -16,6 +16,12 @@ public class ResponseDTO<T> {
 		this.message = message;
 		this.data = data;
 	}
+
+	public ResponseDTO(boolean status, String message) {
+		super();
+		this.status = status;
+		this.message = message;
+	}
 	
 	public boolean isStatus() {
 		return status;
