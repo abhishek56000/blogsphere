@@ -16,7 +16,7 @@ public class UserDTO {
 	    private String pwd;
 
 	    private String phoneNo;
-
+        private String photo;
 	    private String about;
 
 		public int getId() {

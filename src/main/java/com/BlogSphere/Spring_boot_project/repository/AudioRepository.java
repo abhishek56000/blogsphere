@@ -1,4 +1,8 @@
 package com.BlogSphere.Spring_boot_project.repository;
 
-public class AudioRepository {
+import com.BlogSphere.Spring_boot_project.entity.Audio;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AudioRepository extends JpaRepository<Audio,Integer> {
+
 }

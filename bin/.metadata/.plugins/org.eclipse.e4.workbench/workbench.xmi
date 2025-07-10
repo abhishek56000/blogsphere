@@ -2575,7 +2575,7 @@
   <commands xmi:id="_MyM-rFEbEfCYluENCMtRZw" elementId="org.eclipse.ui.edit.text.folding.expand_all" commandName="Expand All" description="Expands all folded regions" category="_Mx6DlFEbEfCYluENCMtRZw"/>
   <commands xmi:id="_MyM-rVEbEfCYluENCMtRZw" elementId="org.eclipse.wst.xsd.ui.refactor.makeElementGlobal" commandName="Make Local Element &amp;Global" description="Promotes local element to global level and replaces its references" category="_Mx6DkVEbEfCYluENCMtRZw"/>
   <commands xmi:id="_MyM-rlEbEfCYluENCMtRZw" elementId="org.eclipse.jdt.ui.correction.encapsulateField.assist" commandName="Quick Assist - Create getter/setter for field" description="Invokes quick assist and selects 'Create getter/setter for field'" category="_Mx74y1EbEfCYluENCMtRZw"/>
-  <commands xmi:id="_MyM-r1EbEfCYluENCMtRZw" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning users" category="_Mx74wFEbEfCYluENCMtRZw"/>
+  <commands xmi:id="_MyM-r1EbEfCYluENCMtRZw" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning user" category="_Mx74wFEbEfCYluENCMtRZw"/>
   <commands xmi:id="_MyM-sFEbEfCYluENCMtRZw" elementId="org.eclipse.egit.ui.team.ReplaceWithPrevious" commandName="Replace with Previous Revision" category="_Mx74xlEbEfCYluENCMtRZw"/>
   <commands xmi:id="_MyM-sVEbEfCYluENCMtRZw" elementId="org.eclipse.m2e.sourcelookup.ui.openPom" commandName="Open Pom" category="_Mx6qsVEbEfCYluENCMtRZw"/>
   <commands xmi:id="_MyM-slEbEfCYluENCMtRZw" elementId="org.eclipse.ui.window.hideShowEditors" commandName="Toggle Shared Area Visibility" description="Toggles the visibility of the shared area" category="_Mx6qplEbEfCYluENCMtRZw"/>

@@ -4,99 +4,137 @@ package com.BlogSphere.Spring_boot_project.entity;
 import java.util.Date;
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToOne;
+import com.BlogSphere.Spring_boot_project.enums.PostType;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-public class Posts{
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Setter
+@Getter
+public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String content;
-
-    private Date date;
-
-    private String postType;
-    
-    @ManyToMany
-    private List<Users> uid;
-
-    @ManyToMany
-    private List<Audio> audios;
-	
-    @ManyToMany
-    private List<Videos> videos;
+    private Date createdDate;
+    @Enumerated(EnumType.STRING)
+    private PostType postType;
+    @ManyToOne
+    private User user;
+    @ManyToOne
+    private Audio audio;
     @OneToOne
-    private Texts texts;
+    private Image image;
+    @OneToOne
+    private Video video;
+    @OneToOne
+    private Text text;
+
     @ManyToMany
     private List<Tag> tags;
-    @ManyToMany
-    private List<Photos> photo;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public String getPostType() {
-		return postType;
-	}
-	public void setPostType(String postType) {
-		this.postType = postType;
-	}
-	public List<Users> getUid() {
-		return uid;
-	}
-	public void setUid(List<Users> uid) {
-		this.uid = uid;
-	}
-	public List<Audio> getAudios() {
-		return audios;
-	}
-	public void setAudios(List<Audio> audios) {
-		this.audios = audios;
-	}
-	public List<Videos> getVideos() {
-		return videos;
-	}
-	public void setVideos(List<Videos> videos) {
-		this.videos = videos;
-	}
-	public Texts getTexts() {
-		return texts;
-	}
-	public void setTexts(Texts texts) {
-		this.texts = texts;
-	}
-	public List<Tag> getTags() {
-		return tags;
-	}
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;
-	}
-	public List<Photos> getPhoto() {
-		return photo;
-	}
-	public void setPhoto(List<Photos> photo) {
-		this.photo = photo;
-	}
 
-    
+    @OneToMany(mappedBy = "post")
+    private List<Likes> likes;
+
+    @OneToMany(mappedBy = "post")
+    private List<Comments> comments;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public PostType getPostType() {
+        return postType;
+    }
+
+    public void setPostType(PostType postType) {
+        this.postType = postType;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Audio getAudio() {
+        return audio;
+    }
+
+    public void setAudio(Audio audio) {
+        this.audio = audio;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public Video getVideo() {
+        return video;
+    }
+
+    public void setVideo(Video video) {
+        this.video = video;
+    }
+
+    public Text getText() {
+        return text;
+    }
+
+    public void setText(Text text) {
+        this.text = text;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public List<Likes> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(List<Likes> likes) {
+        this.likes = likes;
+    }
+
+    public List<Comments> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comments> comments) {
+        this.comments = comments;
+    }
 }
 

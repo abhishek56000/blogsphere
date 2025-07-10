@@ -28,7 +28,18 @@ public class UserController {
         UserDTO users = userService.saveUserDao(user);
         return new ResponseDTO<UserDTO>(true, "User saved", users);
     }
-
-
-
+    @PutMapping("/update/{id}")
+    public ResponseDTO<UserDTO>update(@PathVariable int id,@RequestBody UserDTO dto){
+        UserDTO userDTO=userService.update(id,dto);
+        return new ResponseDTO<>(true,"User update",userDTO);
+    }
+    @GetMapping("/get/{id}")
+    public ResponseDTO<UserDTO>get(@PathVariable int id){
+        UserDTO userDTO=userService.getUser(id);
+        return new ResponseDTO<>(true,"get user",userDTO);
+    }
+    public ResponseDTO<UserDTO>delete(@PathVariable int id){
+        userService.delete(id);
+        return new ResponseDTO<>(true,"delete");
+    }
 }

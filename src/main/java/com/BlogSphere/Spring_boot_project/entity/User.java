@@ -4,10 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 
 @Entity
-public class Users{
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,9 +23,9 @@ public class Users{
     private String phoneNo;
 
     private String about;
-    
-    @OneToOne
-    private Photos photo;
+
+
+    private String photo;
 
 	public int getId() {
 		return id;
@@ -84,15 +83,12 @@ public class Users{
 		this.about = about;
 	}
 
-	public Photos getPhoto() {
+	public String getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(Photos photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
-
-   
-
 }
 

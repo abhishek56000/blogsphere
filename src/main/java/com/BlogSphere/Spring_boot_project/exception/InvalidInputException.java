@@ -1,5 +1,7 @@
 package com.BlogSphere.Spring_boot_project.exception;
 
+import com.BlogSphere.Spring_boot_project.dto.UserDTO;
+
 public class InvalidInputException extends RuntimeException{
 
     String message;
@@ -8,4 +10,7 @@ public class InvalidInputException extends RuntimeException{
         super(message);
         this.message = message;
     }
-}
+
+
+    }
+

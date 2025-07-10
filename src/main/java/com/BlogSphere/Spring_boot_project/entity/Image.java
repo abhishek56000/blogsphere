@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Photo {
+public class Image {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

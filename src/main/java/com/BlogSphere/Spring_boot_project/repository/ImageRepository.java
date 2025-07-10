@@ -1,4 +1,8 @@
 package com.BlogSphere.Spring_boot_project.repository;
 
-public interface ImageRepository {
+import com.BlogSphere.Spring_boot_project.entity.Image;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ImageRepository extends JpaRepository<Image,Integer> {
+
 }

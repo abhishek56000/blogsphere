@@ -12,6 +12,7 @@ public class Tag {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
+
 	public int getId() {
 		return id;
 	}
