@@ -17,13 +17,17 @@ public class Posts{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String content;
+
     private Date date;
+
     private String postType;
     
     @ManyToMany
     private List<Users> uid;
+
     @ManyToMany
     private List<Audio> audios;
+	
     @ManyToMany
     private List<Videos> videos;
     @OneToOne
