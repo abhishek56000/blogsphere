@@ -10,7 +10,7 @@ import java.util.Properties;
 
 @Configuration
 public class MailConfig {
-
+    
     public static String SENDER = "abhishekgaur560@gmail.com";
     
     @Bean
