@@ -1,8 +1,6 @@
 package com.BlogSphere.Spring_boot_project.service;
 
 import com.BlogSphere.Spring_boot_project.dao.*;
-import com.BlogSphere.Spring_boot_project.dto.PostDTO;
-import com.BlogSphere.Spring_boot_project.dto.TagDto;
 import com.BlogSphere.Spring_boot_project.entity.*;
 import com.BlogSphere.Spring_boot_project.enums.PostType;
 import com.BlogSphere.Spring_boot_project.exception.InvalidInputException;

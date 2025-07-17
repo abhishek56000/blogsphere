@@ -1,7 +1,6 @@
 package com.BlogSphere.Spring_boot_project.service;
 
 import com.BlogSphere.Spring_boot_project.dao.TagDao;
-import com.BlogSphere.Spring_boot_project.dto.TagDto;
 import com.BlogSphere.Spring_boot_project.entity.Tag;
 import com.BlogSphere.Spring_boot_project.utils.DataBinder;
 import org.springframework.beans.factory.annotation.Autowired;

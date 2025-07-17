@@ -5,9 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.BlogSphere.Spring_boot_project.dto.ResponseDTO;
-import com.BlogSphere.Spring_boot_project.dto.UserDTO;
-
 import com.BlogSphere.Spring_boot_project.service.UserService;
 
 

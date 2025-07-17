@@ -1,9 +1,7 @@
 package com.BlogSphere.Spring_boot_project.controller;
 
-import com.BlogSphere.Spring_boot_project.dto.PostDTO;
 import com.BlogSphere.Spring_boot_project.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.BlogSphere.Spring_boot_project.dto.ResponseDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

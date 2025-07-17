@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.BlogSphere.Spring_boot_project.dao.UserDao;
-import com.BlogSphere.Spring_boot_project.dto.UserDTO;
 import com.BlogSphere.Spring_boot_project.utils.DataBinder;
 
 @Service

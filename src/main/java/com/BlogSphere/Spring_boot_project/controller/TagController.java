@@ -1,7 +1,5 @@
 package com.BlogSphere.Spring_boot_project.controller;
 
-import com.BlogSphere.Spring_boot_project.dto.ResponseDTO;
-import com.BlogSphere.Spring_boot_project.dto.TagDto;
 import com.BlogSphere.Spring_boot_project.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
