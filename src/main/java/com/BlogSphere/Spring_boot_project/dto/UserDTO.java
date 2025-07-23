@@ -74,6 +74,12 @@ public class UserDTO {
 		public void setAbout(String about) {
 			this.about = about;
 		}
-	    
-	    
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 }

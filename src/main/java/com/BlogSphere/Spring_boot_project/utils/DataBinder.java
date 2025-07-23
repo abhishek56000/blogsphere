@@ -14,9 +14,14 @@ public class DataBinder {
 
     public UserDTO convertToDTO(User entity) {
         UserDTO dto = new UserDTO();
-
         dto.setId(entity.getId());
         dto.setEmail(entity.getEmail());
+        dto.setName(entity.getName());
+        dto.setUsername(entity.getUsername());
+        dto.setAbout(entity.getAbout());
+        dto.setPwd(entity.getPwd());
+        dto.setPhoto(entity.getPhoto());
+        dto.setPhoneNo(entity.getPhoneNo());
 
         return dto;
     }
@@ -27,6 +32,10 @@ public class DataBinder {
         entity.setName(dto.getName());
         entity.setEmail(dto.getEmail());
         entity.setPhoneNo(dto.getPhoneNo());
+        entity.setUsername(dto.getUsername());
+        entity.setAbout(dto.getAbout());
+        entity.setPwd(dto.getPwd());
+        entity.setPhoto(dto.getPhoto());
 
         return entity;
     }

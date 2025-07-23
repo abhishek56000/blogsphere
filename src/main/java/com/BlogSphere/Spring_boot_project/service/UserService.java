@@ -2,6 +2,7 @@ package com.BlogSphere.Spring_boot_project.service;
 
 import com.BlogSphere.Spring_boot_project.entity.User;
 import com.BlogSphere.Spring_boot_project.exception.InvalidInputException;
+import com.BlogSphere.Spring_boot_project.utils.AESUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,15 @@ public class UserService {
 		validateInput(userDTO);
 
 		User user = dataBinder.convertToEntity(userDTO);
-		user = userDao.saveUserDao(user);
+		String pass = user.getPwd();
+		String encpass;
+        try {
+          encpass = AESUtils.encrypt(pass);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+		user.setPwd(encpass);
+        user = userDao.saveUserDao(user);
 		emailService.sendRegistrationMail(user.getEmail(), user.getName());
 		return dataBinder.convertToDTO(user);
 		
@@ -59,10 +68,19 @@ public class UserService {
     }
 		public UserDTO getUser(int id ){
 		User user=userDao.getUserById(id);
+		String encpass = user.getPwd();
+			String decpass;
+            try {
+                 decpass = AESUtils.decrypt(encpass);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            user.setPwd(decpass);
 			return dataBinder.convertToDTO(user);
 }
 
 	public User getUserByEmail(String email) {
+
 		return userDao.getUserByEmail(email);
 	}
 	public void delete(int id){
